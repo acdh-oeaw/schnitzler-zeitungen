@@ -126,7 +126,10 @@ TRANSKRIBUS_TRANSLATIONS = {
         'result_col': 'Sammlung',
         'result_doc': 'Dokument',
         'result_page': 'Seite',
-        'result_link': 'zum Dokument'
+        'result_link': 'zum Dokument',
+        'hits': 'Treffer',
+        'prev': 'zurück',
+        'next': 'vor'
     },
     'page': {
         'img_col': 'Faksimile',
