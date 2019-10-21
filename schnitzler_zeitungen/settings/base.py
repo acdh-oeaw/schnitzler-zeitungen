@@ -107,3 +107,38 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+
+
+# Translations
+TRANSKRIBUS_TRANSLATIONS = {
+    'search_form': {
+        'prefil': 'In allen Dokumenten suchen',
+        'button': 'Los!'
+    },
+    'search_header': {
+        'header': 'Volltextsuche'
+    },
+    'hits': {
+        'facet_header': 'Suche einschränken',
+        'facet_doc_title': 'Dokument',
+        'result_header': 'Ergebnisse',
+        'kwic_header': 'Stelle',
+        'result_col': 'Sammlung',
+        'result_doc': 'Dokument',
+        'result_page': 'Seite',
+        'result_link': 'zum Dokument'
+    },
+    'page': {
+        'img_col': 'Faksimile',
+        'text_col': 'Text'
+    },
+    'docs': {
+        'title_col': 'Titel',
+        'page_nr_col': 'Anzahl Seiten',
+        'preview_col': 'Vorschau',
+        'doc_singular': 'Dokument',
+        'doc_plural': 'Dokumente',
+        'page_singular': 'Seite',
+        'page_plural': 'Seiten'
+    }
+}
