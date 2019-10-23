@@ -279,3 +279,110 @@ a > .fa-2x {
 .card-header {
   background-color: #ffffff;
 }
+
+
+/* Modifikations of Transkribus-App */
+.transkribus_collection-description {
+  display:none;
+}
+
+.transkibus_search-button {
+  background-color:#b08968;
+  border-color:#b08968;
+}
+
+.transkibus_search-button:hover {
+  background-color:#b08968;
+  border-color:#b08968;
+}
+
+.transkibus_search-button:active {
+  background-color:#b08968;
+  border-color:#b08968;
+}
+
+.transkribus_hit-info-collection {
+  display: none;
+}
+
+.transkribus_hit-info-doc-id {
+  display: none;
+}
+
+.transkribus_kwic {
+  order:2;
+}
+
+.transkribus_kwic::before {
+  content:"…";
+}
+
+.transkribus_kwic::after {
+  content:" …";
+}
+
+.transkribus_kwic em {
+  color: #b08968;
+  font-weight: bold;
+}
+
+.transkribus_facets-list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.transkribus_hit-info {
+  list-style:none;
+  margin-bottom: 0.3em;
+  padding-left: 0px;
+
+}
+
+
+.transkribus_hit-info-doc {
+  font-weight: bold;
+  display: inline;
+}
+
+.transkribus_hit-info-page {
+  display: inline;
+}
+
+.transkribus_hit {
+  /* border-bottom:3px solid #b08968; */
+  margin-bottom: 1em;
+  display: flex;
+  flex-flow: column;
+}
+
+.transkribus_hit-info-doc .transkribus_hit-info-label, .transkribus_hit-info-separator {
+  display: none;
+}
+
+
+.transkribus_facets-container {
+
+}
+
+.breadcrumb {
+  /* background-color: #b0896869; */
+  background-color:white;
+  font-weight: bolder;
+}
+
+.transkribus_hits .card-header {
+  display: none;
+}
+
+
+.transkribus_facets-container .card-header {
+  display: none;
+}
+
+.transkribus_facets-container .card-body h3 {
+  display: none;
+}
+
+.transkribus_hits-container .card-header h1 {
+  font-size: inherit;
+}
