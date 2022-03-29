@@ -40,3 +40,5 @@ dev_secret.py
 
 
 .DS_Store
+secret.env
+env.secret

@@ -4,13 +4,11 @@ a simple django project for interacting with the [Transkribus-API](https://trans
 
 ## install
 
-
 1. clone the repo `git clone https://github.com/acdh-oeaw/schnitzler-zeitungen.git`
-1. create a virtual environment
-1. install the dependencies `pip install -r requirements.txt`[1]
-1. provide the needed `TRANSKRIBUS` settings in you `{root}/schnitzler-zeitungen/settings/my_settings_file.py`
-1. start the developement server `python manage.py runserver --settings=schnitzler-zeitungen.settings.{my_settings_file.py}`
-
+1. create and activate a virtual environment
+1. install the dependencies `pip install -r requirements.txt`
+1. provide the needed `TRANSKRIBUS` settings via environment variables (see below as well as [acdh-django-transkribus](https://github.com/acdh-oeaw/acdh-django-transkribus))
+1. start the developement server `python manage.py runserver`
 
 ## TRANSKRIBUS-Settings
 
@@ -26,4 +24,15 @@ TRANSKRIBUS = {
 ```
 
 
-[1] the transkribus specific code [acdh-django-transkribus](https://github.com/acdh-oeaw/acdh-django-transkribus.git) is not yet wrapped in a python package. Therefore it needs to be included manually, either by copy pasting or via symlink 
+## docker
+
+### building the image
+
+* `docker build -t schnitzlerzeitungen:latest .`
+* `docker build -t schnitzlerzeitungen:latest --no-cache .`
+
+### running the image
+
+To run the image you should provide an `.env` file to pass in needed environment variables; see example below:
+
+* `docker run -it -p 8020:8020 --env-file env.secret --name schnitzlerzeitungen schnitzlerzeitungen:latest`

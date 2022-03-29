@@ -1,16 +1,28 @@
 import os
+from pathlib import Path
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(
-    os.path.dirname(os.path.abspath(os.path.join(__file__, '../')))
-)
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+BASE_DIR = Path(__file__).resolve().parent.parent
+SECRET_KEY = os.environ.get('SECRET_KEY', 'TZRHHwGV')
+ADD_ALLOWED_HOST = os.environ.get('ALLOWED_HOST', '*')
+
+if os.environ.get('DEBUG', False):
+    DEBUG = True
+else:
+    DEBUG = False
+
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "0.0.0.0",
+    ADD_ALLOWED_HOST,
+]
+ACDH_IMPRINT_URL = "https://shared.acdh.oeaw.ac.at/acdh-common-assets/api/imprint.php?serviceID="
+REDMINE_ID = 15042
 SHARED_URL = "https://shared.acdh.oeaw.ac.at/"
 PROJECT_NAME = "schnitzler_zeitungen"
 
 
-ACDH_IMPRINT_URL = "https://shared.acdh.oeaw.ac.at/acdh-common-assets/api/imprint.php?serviceID="
-REDMINE_ID = 15042
 
 # Application definition
 
@@ -107,6 +119,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+
+
+TRANSKRIBUS = {
+    "user": os.environ.get('TRANSKRIBUS_USER'),
+    "pw": os.environ.get('TRANSKRIBUS_PW'),
+    "col_id": os.environ.get('TRANSKRIBUS_COL'),
+    "base_url": "https://transkribus.eu/TrpServer/rest"
+}
+TRANSKRIBUS_PUBLIC = True
 
 
 # Translations
